@@ -1,0 +1,78 @@
+// Bố cục chính
+.main-container {
+  position: absolute;
+  opacity: $opacity-main;
+  width: auto;
+  left: $spacing-container-left;
+  right: $spacing-container-right;
+
+  .header-wrapper {
+    height: 90px;
+    
+    .header-content {
+      width: 100%;
+      background: $color-header-bg;
+      border-right-color: transparent;
+    }
+  }
+
+  .content-wrapper {
+    height: 230px;
+
+    .card-column {
+      background-color: $color-white;
+      border: none;
+      width: $grid-column-width-wide;
+      padding-top: $padding-top-content;
+
+      .sub-bar {
+        @include sub-bar-style($color-bar-bg, 15%, $margin-bottom-bar);
+      }
+    }
+
+    .empty-column {
+      background-color: $color-white;
+      border: none;
+    }
+
+    .full-bar-column {
+      background-color: $color-white;
+      border: none;
+      width: $grid-column-width-wide;
+      padding-top: $padding-top-content;
+
+      .sub-bar-tall {
+        @include sub-bar-style($color-bar-bg, 92%);
+      }
+    }
+  }
+
+  .footer-wrapper {
+    height: 50px;
+
+    .footer-content {
+      width: 100%;
+      background: $color-footer-bg;
+      border-right-color: transparent;
+    }
+  }
+}
+
+// Lưới nền mờ (Background grid overlay)
+.background-grid-container {
+  opacity: $opacity-bg-grid;
+
+  .bg-grid-wrapper {
+    height: 370px;
+
+    .bg-grid-content {
+      background-color: $color-white;
+      border-right: 1px solid $color-border-black;
+      border-left: 1px solid $color-border-black;
+
+      &:not(:first-child) {
+        border-left: none; // Đảm bảo không bị đè viền kép ở các cột sau
+      }
+    }
+  }
+}

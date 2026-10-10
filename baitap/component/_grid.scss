@@ -1,0 +1,9 @@
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px; // Mặc định, có thể override bằng inline style hoặc biến tùy chỉnh
+}
+
+.gridcontent {
+  @include grid-content-base();
+}

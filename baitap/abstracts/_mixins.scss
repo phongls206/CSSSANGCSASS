@@ -1,0 +1,21 @@
+// Mixin định nghĩa grid content dùng chung
+@mixin grid-content-base($width: $grid-column-width) {
+  width: $width;
+  margin: 0;
+  border-right: 1px solid $color-border-grey;
+  height: 100%;
+  float: left;
+  background-color: $color-primary-bg;
+  background-color: $color-secondary-bg;
+}
+
+// Mixin cho các khối con dạng thanh (bars)
+@mixin sub-bar-style($bg-color, $height, $margin-bottom: 0) {
+  background-color: $bg-color;
+  border: none;
+  width: 100%;
+  height: $height;
+  @if $margin-bottom != 0 {
+    margin-bottom: $margin-bottom;
+  }
+}
